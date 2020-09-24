@@ -18,3 +18,9 @@ RUN    cd /opt \
     && bash miniconda.sh -b -p /opt/miniconda
     
 ENV PATH="/opt/miniconda/bin:/opt/miniconda/lib:$PATH"
+
+RUN    conda config --set always_yes yes --set changeps1 no \
+    && conda install -c cadquery -c conda-forge \
+        cadquery=master \
+        cq-editor=master \
+    && conda clean -a -y
