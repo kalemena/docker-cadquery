@@ -5,9 +5,8 @@ ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 # Compiler tools
 RUN    apt-get update -y \
     && apt-get install -qqy \
-        wget \
-        libgl1-mesa-glx \
-        libxi6 \
+        wget bzip2 ca-certificates software-properties-common \
+        libgl1-mesa-glx libxi6 libglib2.0-0 libxext6 libsm6 libxrender1 \
     && apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
@@ -24,3 +23,5 @@ RUN    conda config --set always_yes yes --set changeps1 no \
         cadquery=master \
         cq-editor=master \
     && conda clean -a -y
+
+CMD ["/opt/miniconda/bin/cq-editor"]
