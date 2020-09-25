@@ -11,3 +11,5 @@ build:
 	docker build --build-arg VERSION=$(VERSION) -t kalemena/cadquery:$(VERSION) .
 	docker tag kalemena/cadquery:$(VERSION) kalemena/cadquery:latest
 
+cadquery:
+	./run.sh
