@@ -4,6 +4,23 @@ This is an image with CQ Editor.
 
 == References
 
+.Study:
+* link:https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0225795&type=printable[Comparing OpenSCAD and FreeCAD python Libs]
+
+[quote, Study]
+____
+CadQueryv1.2 can be easily integrated into FreeCAD and be used with FreeCAD graphical interface. +
+On the other hand, CadQuery v2.0 is a new fork of CadQuery that is independent from FreeCAD. +
+We consider that it could be a promising alternative. +
+At the present day the two versions remain compatible; hence,the CadQuery filter stage model and the code snippets shown in this paper are valid for both versions.
+____
+
+[quote, .p21]
+____
+Interesting compare of simple mesh. +
+FreeCAD is more complex ... but more portable and powerful !
+OpenSCAD is simpler and suitable for 3D printing usage.
+____
 
 .Parts:
 * link:https://github.com/cqparts/cqparts[Official parts]
