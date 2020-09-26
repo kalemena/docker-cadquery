@@ -21,11 +21,14 @@ ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 RUN    apt-get update -y \
     && apt-get install -qqy \
         wget bzip2 ca-certificates software-properties-common \
-        libgl1-mesa-glx libxi6 libglib2.0-0 libxext6 libsm6 libxrender1 \
+        libglu1-mesa libgl1-mesa-dri mesa-common-dev libglu1-mesa-dev \
+        libxi6 fonts-freefont-ttf \
     && apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+# qt5-default \
 
 ENV QT_XKB_CONFIG_ROOT=/usr/share/X11/xkb
+# ENV QT_DEBUG_PLUGINS=1
 
 RUN    cd /opt \
     && wget https://repo.anaconda.com/miniconda/Miniconda3-py37_4.8.3-Linux-x86_64.sh -O miniconda.sh \

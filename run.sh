@@ -9,6 +9,7 @@ MAP_GID=${GID:-`id -g`}
 docker run -it --rm \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -e DISPLAY=unix$DISPLAY \
+    --device /dev/dri/ \
     kalemena/cadquery:latest ${COMMAND}
 
 # -u $MAP_UID:$MAP_GID \
