@@ -1,3 +1,10 @@
+ifdef::env-github[]
+image:https://github.com/kalemena/docker-caqquery/workflows/Pipeline/badge.svg[GitHub Build]
+image:https://img.shields.io/docker/v/kalemena/caqquery[Docker Hub, link=https://hub.docker.com/r/kalemena/caqquery/tags]
+image:https://img.shields.io/docker/pulls/kalemena/caqquery[Docker Hub, link=https://hub.docker.com/r/kalemena/caqquery/tags]
+image:https://img.shields.io/docker/image-size/kalemena/caqquery[Docker Hub, link=https://hub.docker.com/r/kalemena/caqquery/tags]
+endif::[]
+
 = CAD Query Docker Image
 
 This is an image of CadQuery 2.x with CQ Editor. + 
