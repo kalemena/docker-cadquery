@@ -1,7 +1,7 @@
 #!/bin/bash
 xhost +local:
 
-COMMAND=${COMMAND:-/bin/bash}
+COMMAND=${COMMAND:-}
 
 MAP_UID=${UID:-`id -u`}
 MAP_GID=${GID:-`id -g`}
