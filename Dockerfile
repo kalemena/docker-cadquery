@@ -29,9 +29,9 @@ RUN    apt-get update -y \
 
 ENV QT_XKB_CONFIG_ROOT=/usr/share/X11/xkb
 # ENV QT_DEBUG_PLUGINS=1
-
+ 
 RUN    cd /opt \
-    && wget https://repo.anaconda.com/miniconda/Miniconda3-py37_4.8.3-Linux-x86_64.sh -O miniconda.sh \
+    && wget https://repo.anaconda.com/miniconda/Miniconda3-py37_4.9.2-Linux-x86_64.sh -O miniconda.sh \
     && bash miniconda.sh -b -p /opt/miniconda
     
 ENV PATH="/opt/miniconda/bin:/opt/miniconda/lib:$PATH"
