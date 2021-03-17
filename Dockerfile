@@ -42,4 +42,8 @@ RUN    conda config --set always_yes yes --set changeps1 no \
         cq-editor=master \
     && conda clean -a -y
 
+ADD requirements.txt /opt/
+
+RUN conda install --file /opt/requirements.txt -y; \
+    conda clean -a -y;
 CMD ["/opt/miniconda/bin/cq-editor"]
