@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 # Build-time metadata as defined at http://label-schema.org
 ARG BUILD_DATE
@@ -31,10 +31,13 @@ ENV QT_XKB_CONFIG_ROOT=/usr/share/X11/xkb
 # ENV QT_DEBUG_PLUGINS=1
  
 RUN    cd /opt \
-    && wget https://repo.anaconda.com/miniconda/Miniconda3-py37_4.9.2-Linux-x86_64.sh -O miniconda.sh \
+    && wget https://repo.anaconda.com/miniconda/Miniconda3-py313_25.11.1-1-Linux-x86_64.sh -O miniconda.sh \
     && bash miniconda.sh -b -p /opt/miniconda
     
 ENV PATH="/opt/miniconda/bin:/opt/miniconda/lib:$PATH"
+
+RUN conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
+RUN conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
 
 RUN    conda config --set always_yes yes --set changeps1 no \
     && conda install -c cadquery -c conda-forge \
